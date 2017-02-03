@@ -11,6 +11,7 @@ Jotting my notes down here for future reference, or for anybody interested in a 
 
 https://github.com/ATL-WDI-Curriculum/student-laptop-requirements-and-setup
 https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
+https://help.github.com/articles/creating-an-access-token-for-command-line-use/
 
 
 ## Software to download and install: 
