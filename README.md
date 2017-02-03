@@ -133,7 +133,7 @@ If it does not reflect the same as above, edit it in .bash_profile (See the comm
 
 https://github.com/jimeh/git-aware-prompt
 
-3. Edit .gitconfig:
+4. Edit .gitconfig:
 
         git config --global user.name "John Doe"
         git config --global user.email johndoe@example.com
@@ -152,7 +152,7 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
             g  = log --graph --all --branches --decorate --pretty=format:'[%C(auto)%h%Creset][%C(cyan)%an %ar%Creset]%C(auto)%d%Creset %s %C(auto)%Creset'
             ls = log --stat --all --decorate
 
-4. Install all other brews:
+5. Install all other brews:
         
         brew install node
         brew install mongodb
@@ -161,15 +161,15 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
         brew install heroku
         brew install ruby
         
-5. Install npm (it got kinda installed with Node)
+6. Install npm (it got kinda installed with Node)
 
         npm install npm -g
 
-6. (Optional) Install cask. It helps install the software listed above, and more.
+7. (Optional) Install cask. It helps install the software listed above, and more.
 
         brew tap caskroom/cask
 
-7. (Optional) Use cask to install all/most of the above software.
+8. (Optional) Use cask to install all/most of the above software.
 
 ## Configuring VS Code:
 
@@ -187,8 +187,8 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
    * vscode-icons
    * Python
   
-1. Preferences > Color Theme: Monokai
-2. Preferences > User Settings: 
+2. Preferences > Color Theme: Monokai
+3. Preferences > User Settings: 
 
         {
            "window.zoomLevel": 0,
@@ -203,7 +203,7 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
            "auto-close-tag.SublimeText3Mode": true
         }
 
-3. Preferences > Keybindings: 
+4. Preferences > Keybindings: 
 
         [
         { 	"key": "cmd+;",
