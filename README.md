@@ -149,8 +149,15 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
             editor = code -n -w
 
         [alias]
+            a = !git add . && git status
+            c = commit
+            cm = commit -m
+            d = diff
             g  = log --graph --all --branches --decorate --pretty=format:'[%C(auto)%h%Creset][%C(cyan)%an %ar%Creset]%C(auto)%d%Creset %s %C(auto)%Creset'
             ls = log --stat --all --decorate
+            master = checkout master
+            puom = pull origin master
+            s = status
 
 5. Install all other brews:
         
