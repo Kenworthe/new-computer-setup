@@ -18,14 +18,17 @@ https://help.github.com/articles/creating-an-access-token-for-command-line-use/
 
 ### Programming: 
 
+* iTerm2 (Terminal replacement)
 * VS Code
+* IntelliJ IDEA CE
 * Chrome
   * **Necessary extensions:**
   * uBlock Origin
-  * BuiltWith
   * EditThisCookie
   * OneTab
+  * **Optional extensions:**
   * Reddit Enhancement Suite
+  * BuiltWith
   * Momentum
 * Firefox
 * Robomongo
@@ -48,12 +51,13 @@ https://help.github.com/articles/creating-an-access-token-for-command-line-use/
 
 * Flux
 * Google Drive
-* Better Touch Tool
+* Better Touch Tool (purchased)
 
 ### Other: 
 
 * uTorrent
 * Steam
+* Office 365
 
 
 ## Pre-setup:
@@ -168,6 +172,7 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
         brew install httpie
         brew install heroku
         brew install ruby
+        brew install docker
         
 6. Install npm (it got kinda installed with Node)
 

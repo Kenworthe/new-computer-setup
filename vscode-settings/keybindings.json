@@ -1,0 +1,29 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+{ 	"key": "cmd+;",
+	"command": "cursorEnd",
+	"when": "editorTextFocus" },
+
+{ 	"key": "shift+cmd+;",
+	"command": "cursorEndSelect",
+	"when": "editorTextFocus" },
+
+{ 	"key": "cmd+enter",
+	"command": "cursorDown",
+	"when": "editorTextFocus" },
+
+{	"key": "cmd+b",
+	"command": "editor.action.jumpToBracket",
+	"when": "editorTextFocus"
+},
+{
+	"key": "shift+cmd+backspace",
+	"command": "editor.action.deleteLines",
+	"when": "editorTextFocus && !editorReadonly"
+},
+{
+	"key": "shift+cmd+k",
+	"command": "-editor.action.deleteLines",
+	"when": "editorTextFocus && !editorReadonly"
+}
+]
