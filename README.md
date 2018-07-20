@@ -20,9 +20,10 @@ https://help.github.com/articles/creating-an-access-token-for-command-line-use/
 
 * iTerm2 (Terminal replacement)
 * VS Code
-* IntelliJ IDEA CE
+* Notepad++
+* IntelliJ
 * Chrome
-  * **Necessary extensions:**
+  * **Extensions:**
   * uBlock Origin
   * EditThisCookie
   * OneTab
@@ -30,15 +31,19 @@ https://help.github.com/articles/creating-an-access-token-for-command-line-use/
   * Reddit Enhancement Suite
   * BuiltWith
   * Momentum
+  * Mercury Reader
 * Firefox
+* Beyond Compare 4
 * Robomongo
 * Postman
 * Sip (through App Store)
+* Git Bash (via Git for Windows)
 
 ### Media: 
 
 * Spotify
 * VLC Player
+* Winamp
 * Gimp (free version of Photoshop)
 
 ### Communications: 
@@ -191,7 +196,9 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
    * .ejs
    * Angular 1 Javascript and Typescript Snippets
    * Auto Close Tag
+   * Bookmarks
    * ExpressSnippet
+   * ESLint (or jshint)
    * Guides
    * HTML Boilerplate
    * npm Intellisense
@@ -199,11 +206,14 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
    * Path Intellisense
    * vscode-icons
    * Python
+   * XML Tools
   
 2. Preferences > Color Theme: Monokai
 3. Preferences > User Settings: 
 
         {
+           "workbench.colorTheme": "Monokai",
+           "workbench.iconTheme": "vscode-icons",
            "window.zoomLevel": 0,
            "editor.fontSize": 13,
            "editor.tabSize": 4,
@@ -213,7 +223,11 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
               "*.ejs": "html"
            },
     
-           "auto-close-tag.SublimeText3Mode": true
+           "auto-close-tag.SublimeText3Mode": true,
+           "editor.minimap.enabled": true,
+           "editor.minimap.maxColumn": 100,
+           "workbench.welcome.enabled": false,
+           "terminal.integrated.rightClickCopyPaste": false
         }
 
 4. Preferences > Keybindings: 
