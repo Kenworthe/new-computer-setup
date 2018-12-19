@@ -38,7 +38,7 @@
 
     1. host: localhost (127.0.0.1) 
     2. username: root
-    3. password: #K3nworth3
+    3. password: password
     4. port: 3306
     
 2. From bash, type:

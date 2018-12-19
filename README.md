@@ -1,136 +1,103 @@
-# Kenworthe's guide for installing and configuring apps and settings for a new workstation.
+# Kenworthe's guide for setting up a new workstation.
 
-I just bought a new Macbook Pro 2016. Didn't install anything yet, completely blank slate.
-
-At the time of writing this, it is running: MacOS Sierra 10.12.3.
-
-Jotting my notes down here for future reference, or for anybody interested in a quick-start guide.
-
-
-## Good resources: 
-
-https://github.com/ATL-WDI-Curriculum/student-laptop-requirements-and-setup
-https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
-https://help.github.com/articles/creating-an-access-token-for-command-line-use/
+This guide will go over which software & tools to install, setting up .bash_profile, git (and git-extras), nvm, python/pipenv, and whatever else.
 
 
 ## Software to download and install: 
 
 ### Programming: 
 
-* iTerm2 (Terminal replacement)
+#### Editors / IDEs: 
 * VS Code
-* Notepad++
-* IntelliJ
+* IntelliJ / WebStorm / PyCharm / RubyMine
+* Beyond Compare 4
+
+#### Terminal tools: 
+* iTerm2
+* nano
+
+#### DB Tools:
+* Robomongo
+* DB Visualizer
+
+#### Other: 
+* Docker
+* Java SE
+
+### Browsers: 
 * Chrome
   * **Extensions:**
-  * uBlock Origin
-  * EditThisCookie
-  * OneTab
+    * uBlock Origin
+    * EditThisCookie
+    * OneTab
+    * JSON Formatter
   * **Optional extensions:**
-  * Reddit Enhancement Suite
-  * BuiltWith
-  * Momentum
-  * Mercury Reader
+    * Reddit Enhancement Suite
+    * Momentum
+    * Mercury Reader
 * Firefox
-* Beyond Compare 4
-* Robomongo
 * Postman
-* Sip (through App Store)
-* Git Bash (via Git for Windows)
+* Sip color picker (no longer available for free)
+
+
+### Communications: 
+* Slack
+* Discord
+* Skype
+
+
+### Productivity: 
+* Flux
+* Office 365
+* Google Drive
+* Better Touch Tool (not free)
+
 
 ### Media: 
-
 * Spotify
 * VLC Player
 * Winamp
 * Gimp (free version of Photoshop)
 
-### Communications: 
-
-* Slack
-* Discord
-* Skype
-
-### Productivity: 
-
-* Flux
-* Google Drive
-* Better Touch Tool (purchased)
-
 ### Other: 
-
+* smcFanControl
 * uTorrent
 * Steam
-* Office 365
 
 
 ## Pre-setup:
 
-0. Import my bash appearance settings. (See files in this repo.)
-1. Create and configure .bash_profile and .bashrc (Again, see files in this repo.)
+1. Import my bash appearance settings. (See files in this repo.)
+1. Create .bash_profile and .bashrc in root directory. 
 
-        touch .bash_profile and .bashrc
+        cd ~
+        touch .bash_profile
+        touch .bashrc
 
-2. Edit .bash_profile with:
-
-        # Welcome message
-        # ------------------------------------------------------------
-        echo "Initiated .bash_profile"
-
-        # Change Prompt
-        # ------------------------------------------------------------
-        export GITAWAREPROMPT=~/.bash/git-aware-prompt
-        source "${GITAWAREPROMPT}/main.sh"
-
-        export PS1="________________________________________________________________________________\n| [\t] \u @ \w  \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \n| => $ "
-        export PS2="| => "
-
-        # Set Paths
-        # ------------------------------------------------------------
-        # export PATH=/usr/local/bin:$PATH
-
-        # Set default blocksize for ls, df, du
-        # from this: http://hints.macworld.com/comment.php?mode=view&cid=24491
-        # ------------------------------------------------------------
-        export BLOCKSIZE=1k
-
-        # Set Default Editor
-        # ------------------------------------------------------------
-        export EDITOR=code
-
-        # Set Aliases
-        # ------------------------------------------------------------
-        alias path='echo -e ${PATH//:/\\n}'
-        alias tree='tree -I "node_modules|bower_components"'
-
-        # I don't know what this does. starts .bashrc also..?
-        # ------------------------------------------------------------
-        [[ -r ~/.bashrc ]] && . ~/.bashrc
+2. Copy .bash_profile (in this repo) to yours.
         
-3. Edit .bashrc with:
-
-        echo "Initiated .bashrc"
+3. Copy .bashrc (in this repo) to yours.
 
 4. check $PATH by doing: 
 
         echo $PATH
 
-It should be:
+    It should be:
 
         /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-If it does not reflect the same as above, edit it in .bash_profile (See the commented out line).
+    IF it does not reflect the same as above, edit it in .bash_profile (See the commented out line).
 
 5. install Command Line Tools (can do it through App store, or by attempting to run "git --version") Can also possibly do:
 
         xcode-select --install
-        WARNING: I AM NOT SURE IF THIS WORKS. HAVEN'T TRIED IT YET.
+
+    ^ WARNING: I am not totally sure if above command will always work.
 
 
 ## Next up... Homebrew stuff:
 
-1. Install Homebrew using the following command: (from http://brew.sh/ )
+1. Install Homebrew using the following command (from http://brew.sh/) :
 
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -139,9 +106,8 @@ If it does not reflect the same as above, edit it in .bash_profile (See the comm
         brew install git
         brew install git-extras
 
-3. Install git-aware-prompt:
-
-https://github.com/jimeh/git-aware-prompt
+3. Install git-aware-prompt:  
+    https://github.com/jimeh/git-aware-prompt
 
 4. Edit .gitconfig:
 
@@ -149,7 +115,7 @@ https://github.com/jimeh/git-aware-prompt
         git config --global user.email johndoe@example.com
         git config --global core.editor code
 
-This should add a .gitconfig file. Edit it and add Aliases so it looks like:
+    This should add a .gitconfig file. Edit it and add Aliases so it looks like (or copy from this repo):
 
         [user]
             name = Firstname Lastname
@@ -169,7 +135,7 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
             puom = pull origin master
             s = status
 
-5. Install all other brews:
+5. Install all other brews (there's more than below listed):
         
         brew install node
         brew install mongodb
@@ -188,6 +154,7 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
         brew tap caskroom/cask
 
 8. (Optional) Use cask to install all/most of the above software.
+
 
 ## Configuring VS Code:
 
@@ -208,41 +175,18 @@ This should add a .gitconfig file. Edit it and add Aliases so it looks like:
    * Python
    * XML Tools
   
-2. Preferences > Color Theme: Monokai
+2. Preferences > Color Theme: `Monokai`
+    (Also included in this repo just in case.)
+
 3. Preferences > User Settings: 
+    (See `vscode-settings/settings.json` file in repo)
 
-        {
-           "workbench.colorTheme": "Monokai",
-           "workbench.iconTheme": "vscode-icons",
-           "window.zoomLevel": 0,
-           "editor.fontSize": 13,
-           "editor.tabSize": 4,
-           "editor.insertSpaces": false,
+4. Preferences > Keybindings:   
+    (See `vscode-settings/keybindings.json` file in repo)
 
-           "files.associations": {
-              "*.ejs": "html"
-           },
-    
-           "auto-close-tag.SublimeText3Mode": true,
-           "editor.minimap.enabled": true,
-           "editor.minimap.maxColumn": 100,
-           "workbench.welcome.enabled": false,
-           "terminal.integrated.rightClickCopyPaste": false
-        }
 
-4. Preferences > Keybindings: 
+## Other resources: 
 
-        [
-        { 	"key": "cmd+;",
-           	"command": "cursorEnd",
-           	"when": "editorTextFocus" },
-
-        { 	"key": "shift+cmd+;",
-          	"command": "cursorEndSelect",
-          	"when": "editorTextFocus" },
-
-        { 	"key": "cmd+enter",
-          	"command": "cursorDown",
-          	"when": "editorTextFocus" }
-        ]
-
+- [Some code bootcamp guide to setting up a student laptop](https://github.com/ATL-WDI-Curriculum/student-laptop-requirements-and-setup)
+- [Blog post from TaniaRascia which has some nice scripts](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/ ) 
+- [Creating an access token to access GitHub when 2FA is enabled](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
