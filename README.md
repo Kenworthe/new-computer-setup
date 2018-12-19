@@ -22,7 +22,6 @@ This guide will go over which software & tools to install, setting up .bash_prof
 
 #### Other: 
 * Docker
-* Java SE
 
 ### Browsers: 
 * Chrome
