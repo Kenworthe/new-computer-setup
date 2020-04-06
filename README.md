@@ -10,15 +10,15 @@ This guide will go over which software & tools to install, setting up .bash_prof
 #### Editors / IDEs: 
 * VS Code
 * IntelliJ / WebStorm / PyCharm / RubyMine
-* Beyond Compare 4
 
-#### Terminal tools: 
+#### shell tools: 
 * iTerm2
 * nano
 
 #### DB Tools:
-* Robomongo
-* DB Visualizer
+* TablePlus (paid, but preferred)
+* DB Visualizer (free, but meh)
+* Robomongo (for noSQL)
 
 #### Other: 
 * Docker
@@ -30,20 +30,19 @@ This guide will go over which software & tools to install, setting up .bash_prof
     * EditThisCookie
     * OneTab
     * JSON Formatter
+    * 1Password
   * **Optional extensions:**
     * Reddit Enhancement Suite
     * Momentum
     * Mercury Reader
 * Firefox
-* Postman
+* Postman or Insomnia
 * Sip color picker (no longer available for free)
 
 
 ### Communications: 
 * Slack
-* Discord
-* Skype
-
+* Zoom
 
 ### Productivity: 
 * Flux
@@ -55,13 +54,11 @@ This guide will go over which software & tools to install, setting up .bash_prof
 ### Media: 
 * Spotify
 * VLC Player
-* Winamp
 * Gimp (free version of Photoshop)
 
 ### Other: 
 * smcFanControl
 * uTorrent
-* Steam
 
 
 ## Pre-setup:
@@ -132,19 +129,20 @@ This guide will go over which software & tools to install, setting up .bash_prof
             ls = log --stat --all --decorate
             master = checkout master
             puom = pull origin master
+            purom = pull -r origin master
             s = status
 
 5. Install all other brews (there's more than below listed):
         
-        brew install node
-        brew install mongodb
+        brew install nvm
         brew install tree
         brew install httpie
         brew install heroku
-        brew install ruby
+        brew install rbenv
+        brew install pipenv
         brew install docker
         
-6. Install npm (it got kinda installed with Node)
+6. Install npm (skip. should be installed with latest Node)
 
         npm install npm -g
 
@@ -157,7 +155,7 @@ This guide will go over which software & tools to install, setting up .bash_prof
 
 ## Configuring VS Code:
 
-1. Extensions > search & install: 
+1. Extensions > search & install as needed: 
 
    * .ejs
    * Angular 1 Javascript and Typescript Snippets
@@ -182,6 +180,9 @@ This guide will go over which software & tools to install, setting up .bash_prof
 
 4. Preferences > Keybindings:   
     (See `vscode-settings/keybindings.json` file in repo)
+
+5. Preferences > Font: 
+    Install my fave font, Jetbrains Mono: https://www.jetbrains.com/lp/mono/
 
 
 ## Other resources: 
